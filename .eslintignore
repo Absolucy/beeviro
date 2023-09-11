@@ -1,0 +1,3 @@
+dmdump/templates/*.ts
+src/components/ui/*.tsx
+**/index.ts

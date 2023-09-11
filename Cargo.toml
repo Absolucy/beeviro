@@ -1,0 +1,9 @@
+[workspace]
+members = ["dmdump"]
+resolver = "2"
+
+[profile.dev]
+debug = "full"
+opt-level = 0
+strip = "none"
+overflow-checks = false
