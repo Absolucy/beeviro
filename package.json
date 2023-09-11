@@ -1,0 +1,156 @@
+{
+	"name": "beeviro",
+	"private": true,
+	"version": "0.1.0",
+	"license": "(MIT OR Apache-2.0)",
+	"author": {
+		"name": "Lucy",
+		"email": "lucy@absolucy.moe",
+		"url": "https://absolucy.moe"
+	},
+	"repository": "github:Absolucy/beeviro",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+		"format": "prettier -w src",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@radix-ui/react-alert-dialog": "^1.0.4",
+		"@radix-ui/react-dialog": "^1.0.4",
+		"@radix-ui/react-label": "^2.0.2",
+		"@radix-ui/react-menubar": "^1.0.3",
+		"@radix-ui/react-popover": "^1.0.6",
+		"@radix-ui/react-select": "^1.2.2",
+		"@radix-ui/react-separator": "^1.0.3",
+		"@radix-ui/react-slot": "^1.0.2",
+		"@radix-ui/react-switch": "^1.0.3",
+		"@radix-ui/react-tabs": "^1.0.4",
+		"@radix-ui/react-tooltip": "^1.0.6",
+		"@reduxjs/toolkit": "^1.9.5",
+		"class-variance-authority": "^0.7.0",
+		"clsx": "^2.0.0",
+		"lodash-es": "^4.17.21",
+		"lucide-react": "^0.276.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"tailwind-merge": "^1.14.0",
+		"tailwindcss-animate": "^1.0.7"
+	},
+	"devDependencies": {
+		"@iconify-json/fa6-regular": "^1.1.13",
+		"@iconify-json/fa6-solid": "^1.1.15",
+		"@nabla/vite-plugin-eslint": "^1.5.0",
+		"@svgr/core": "^8.1.0",
+		"@svgr/plugin-jsx": "^8.1.0",
+		"@types/lodash-es": "^4.17.9",
+		"@types/node": "^20.6.0",
+		"@types/react": "^18.2.15",
+		"@types/react-dom": "^18.2.7",
+		"@typescript-eslint/eslint-plugin": "^6.0.0",
+		"@typescript-eslint/parser": "^6.6.0",
+		"@vitejs/plugin-react-swc": "^3.3.2",
+		"autoprefixer": "^10.4.15",
+		"eslint": "^8.49.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-config-problems": "^8.0.0",
+		"eslint-plugin-lodash": "^7.4.0",
+		"eslint-plugin-prettier": "^5.0.0",
+		"eslint-plugin-react": "^7.33.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-redux": "^4.0.0",
+		"eslint-plugin-react-refresh": "^0.4.3",
+		"eslint-plugin-tailwindcss": "^3.13.0",
+		"postcss": "^8.4.29",
+		"prettier": "^3.0.3",
+		"prettier-plugin-tailwindcss": "^0.5.4",
+		"tailwindcss": "^3.3.3",
+		"tailwindcss-vite-plugin": "^0.0.7",
+		"typescript": "^5.0.2",
+		"unplugin-icons": "^0.17.0",
+		"vite": "^4.4.5",
+		"vite-plugin-legacy-swc": "^0.4.0",
+		"vite-plugin-turbo-console": "^0.1.0"
+	},
+	"prettier": {
+		"bracketSameLine": true,
+		"printWidth": 100,
+		"semi": true,
+		"singleQuote": false,
+		"trailingComma": "es5",
+		"plugins": [
+			"prettier-plugin-tailwindcss"
+		]
+	},
+	"eslintConfig": {
+		"root": true,
+		"env": {
+			"browser": true,
+			"es2020": true
+		},
+		"parserOptions": {
+			"ecmaVersion": "latest",
+			"sourceType": "module",
+			"project": [
+				"./tsconfig.json",
+				"./tsconfig.node.json"
+			],
+			"tsconfigRootDir": "."
+		},
+		"extends": [
+			"problems",
+			"eslint:recommended",
+			"plugin:@typescript-eslint/recommended-type-checked",
+			"plugin:lodash/recommended",
+			"plugin:react/recommended",
+			"plugin:react-redux/recommended",
+			"plugin:react/jsx-runtime",
+			"plugin:prettier/recommended"
+		],
+		"plugins": [
+			"react-redux",
+			"lodash",
+			"react-refresh",
+			"prettier"
+		],
+		"settings": {
+			"react": {
+				"version": "detect"
+			}
+		},
+		"overrides": [
+			{
+				"files": [
+					"*.ts",
+					"*.tsx"
+				],
+				"parser": "@typescript-eslint/parser"
+			}
+		],
+		"rules": {
+			"react-refresh/only-export-components": [
+				"warn",
+				{
+					"allowConstantExport": true
+				}
+			],
+			"lodash/import-scope": [
+				2,
+				"member"
+			],
+			"@typescript-eslint/ban-ts-comment": "off"
+		},
+		"ignorePatterns": [
+			"dist"
+		]
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"firefox ESR",
+		"not dead",
+		"ie 11"
+	]
+}

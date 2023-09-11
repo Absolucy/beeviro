@@ -1,0 +1,4 @@
+*	text=auto eol=lf
+
+src/virology/symptoms/*	linguist-vendored
+src/components/ui/*		linguist-vendored
