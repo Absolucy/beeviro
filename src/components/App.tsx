@@ -10,7 +10,7 @@ export default function App() {
 	return (
 		<div className="h-screen w-screen bg-purple-900 p-5 text-neutral-100">
 			<Card className="h-2/3 w-2/3 bg-stone-700">
-				<div className="p-auto container m-auto">hihi</div>
+				<div className="container m-2 p-2">hihi</div>
 			</Card>
 		</div>
 	);

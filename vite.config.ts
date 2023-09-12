@@ -4,7 +4,7 @@ import eslintPlugin from "@nabla/vite-plugin-eslint";
 import legacy from "vite-plugin-legacy-swc";
 import path from "path";
 import react from "@vitejs/plugin-react-swc";
-import { TailwindCSSVitePlugin } from "tailwindcss-vite-plugin";
+import { downwind } from "@arnaud-barre/downwind/vite";
 import { defineConfig } from "vite";
 
 /** @type {import('vite').UserConfig} */
@@ -14,12 +14,19 @@ export default defineConfig({
 		TurboConsole(),
 		eslintPlugin(),
 		Icons({ compiler: "jsx", jsx: "react" }),
-		TailwindCSSVitePlugin(),
+		downwind(),
 		legacy(),
 	],
 	resolve: {
 		alias: {
 			"@": path.resolve(__dirname, "./src"),
 		},
+	},
+	css: {
+		transformer: "lightningcss",
+		lightningcss: { drafts: { nesting: true } },
+	},
+	build: {
+		cssMinify: "lightningcss",
 	},
 });
